@@ -94,8 +94,8 @@
                     if ((!wPressed) && (!isTyping)) {
                         sendMouseMove();
                         sendUint8(21);
-                        wPressed = true;
-                    }
+                         if (!rMacro) wPressed = true;
+                  }
                     break;
                 case 81: // Q
                     if ((!qPressed) && (!isTyping)) {
