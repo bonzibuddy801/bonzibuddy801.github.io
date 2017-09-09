@@ -118,7 +118,8 @@
                             <input type="checkbox" class="save" data-box-id="3" onchange="setDarkTheme($(this).is(':checked'));"> Dark Theme</label>
                         <label>
                             <input type="checkbox" class="save" data-box-id="4" onchange="setColors($(this).is(':checked'));"> No colors</label>
-                        <label>
+                         <button type="submit" id="play-btn" onclick="setNick(document.getElementById('nick').value); return false;" class="btn btn-play btn-primary btn-needs-server">Play</button>
+                                                    <label>
                             <input type="checkbox" class="save" data-box-id="5" onchange="setShowMass($(this).is(':checked'));"> Show mass</label>
                         <label>
                             <input type="checkbox" class="save" data-box-id="6" onchange="setSmooth($(this).is(':checked'));"> Smooth Render</label>
