@@ -924,7 +924,7 @@
 
                 ctx.globalAlpha = 1;
                 ctx.fillStyle = "#FFFFFF";
-                var c = "Leaderboard";
+                var c = "Top 10 Players";
                 ctx.font = "30px Ubuntu";
                 ctx.fillText(c, 100 - ctx.measureText(c).width * 0.5, 40);
                 var b, l;
