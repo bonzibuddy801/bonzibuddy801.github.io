@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Eat cells smaller than you and don't get eaten by the bigger ones, as an MMO">
-	<meta name="keywords" content="agario, agar, io, cell, cells, virus, bacteria, blob, game, games, web game, html5, fun, flash">
+	<meta name="keywords" content="agario, agar, io, cell, cells, virus, bacteria, blob, game, games, web game, html5, fun, flash, '^', kermit agario">
 	<meta name="robots" content="index, follow">
 	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<title>bonzibuddy801</title>
+	<title>Ogar Client</title>
 	<link id="favicon" rel="icon" type="image/png" href="assets/img/favicon.png" />
 	<link href="assets/css/fonts.googleapis.css" rel='stylesheet' type='text/css'>
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -46,16 +46,16 @@
 		<div id="helloDialog">
 			<form role="form">
 				<div class="form-group">
-					<center><h2 id="title">bonzibuddy801.github.io</h2></center>
+					<center><h2 id="title">Ogar Client</h2></center>
 				</div>
 				<div class="form-group"> <input id="nick" class="form-control" style="margin-bottom: 10px;" placeholder="Nick" maxlength="30" />
 				<select id="gamemode" class="form-control" style="margin-bottom: 10px;" onchange="setServer($(this).val())" required>
                         <option selected disabled>Select:</option>
-                        <option value="bactertest-feedy123.c9users.io">ffa</option>
-                        <option value="pro-feedy123.c9users.io/">Pro</option>
-                        <option value="">W=virus</option>
+                        <option value="127.0.0.1:443">Solo Server 443</option>
+                        <option value="127.0.0.1:4444">Solo Server 4444</option>
+                        <option value="127.0.0.1:8080">Solo Server 8080</option>
                     </select>
-		    
+		    <input class="form-control" id="" placeholder="Insert server IP" onchange="setServer($(this).val())" />
                     </div>
 				<div class="form-group"> <button type="submit" id="play-btn" onclick="setNick(document.getElementById('nick').value); return false;" class="btn btn-play btn-primary btn-needs-server">Play</button> <button onclick="$('#settings, #instructions').toggle(); return false;" class="btn btn-info btn-settings" id="settings-btn"><i class="glyphicon glyphicon-cog"></i></button> <br clear="both" /> </div>
 				<div id="settings" class="checkbox" style="display:none;">
@@ -140,10 +140,9 @@
 			<center>
 				<h2>Connecting</h2>
 			</center>
-			<p>If you cannot connect to the server, check if you have some anti virus or firewall blocking the connection.</p>
+			<p>If you cannot connect to the server, check if you have some anti virus or firewall blocking the connection, make sure you selected a server to connect to, and make sure the server you're connecting to is up.</p>
 		</div>
-<input type="text" id="chat_textbox" placeholder="Chat dosen't work yet" maxlength="200" />
-
+	</div> <canvas id="canvas" width="800" height="600"></canvas> <input type="text" id="chat_textbox" placeholder="Press enter to chat!" maxlength="200" />
 	<div style="font-family:'Ubuntu'">&nbsp;</div>
 </body>
 </html>
