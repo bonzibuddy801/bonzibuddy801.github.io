@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Eat cells smaller than you and don't get eaten by the bigger ones, as an MMO">
-	<meta name="keywords" content="agario, agar, io, cell, cells, virus, bacteria, blob, game, games, web game, html5, fun, flash, '^', kermit agario">
+	<meta name="keywords" content="agario, agar, io, cell, cells, virus, bacteria, blob, game, games, web game, html5, fun, flash">
 	<meta name="robots" content="index, follow">
 	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,7 +20,7 @@
 	<script>
 		window.addEventListener('keydown', keydown);
 		function keydown(event) {
-			if (event.keyCode == 16) { // SHIFT
+			if (event.keyCode == 16) { // Shift
 				for (var shift = 0; shift < 5; shift++) setTimeout(split, shift * 50);
 			}
 			if (event.keyCode == 65) { // A
@@ -31,7 +31,7 @@
 				setTimeout(split, 50);
 			}
 		}
-		function split() { // SPACE alias
+		function split() { // Space
 			$("body").trigger($.Event("keydown", {
 				keyCode: 32
 			}));
@@ -39,28 +39,6 @@
 				keyCode: 32
 			}));
 		}
-	function detectmob() { 
- if( navigator.userAgent.match(/Android/i)
- || navigator.userAgent.match(/webOS/i)
- || navigator.userAgent.match(/iPhone/i)
- || navigator.userAgent.match(/iPad/i)
- || navigator.userAgent.match(/iPod/i)
- || navigator.userAgent.match(/BlackBerry/i)
- || navigator.userAgent.match(/Windows Phone/i)
- ){
-    location.replace('bonzibuddy801/bonzibuddy801.github.io/mobile')
-  }
- else {
-    return false;
-  }
-};
-if(window.location.hash == "#goto=contains"){
-    location.replace('https://www.w3schools.com/jsref/jsref_includes.asp')
-  }
- else {
-    return false;
-  }
-};
 	</script>
 </head>
 <body>
@@ -73,11 +51,12 @@ if(window.location.hash == "#goto=contains"){
 				<div class="form-group"> <input id="nick" class="form-control" style="margin-bottom: 10px;" placeholder="Nick" maxlength="30" />
 				<select id="gamemode" class="form-control" style="margin-bottom: 10px;" onchange="setServer($(this).val())" required>
                         <option selected disabled>Select:</option>
-                        <option value="bactertest-feedy123.c9users.io">FFA</option>
-                        <option value="pro-feedy123.c9users.io">Pro</option>
-                        <option value="self-feed-feedy123.c9users.io/">Self-feed</option>
+                        <option value="bactertest">FFA</option>
+                        <option value disabled="...">...</option>
+                        <option value disabled="...">...</option>
                     </select>
-		
+		    <input class="form-control" id="" placeholder="Insert server IP" onchange="setServer($(this).val())">
+		    <center><p>NOTE: Click out of the text box to connect to the IP!</p></center>
                     </div>
 				<div class="form-group"> <button type="submit" id="play-btn" onclick="setNick(document.getElementById('nick').value); return false;" class="btn btn-play btn-primary btn-needs-server">Play</button> <button onclick="$('#settings, #instructions').toggle(); return false;" class="btn btn-info btn-settings" id="settings-btn"><i class="glyphicon glyphicon-cog"></i></button> <br clear="both" /> </div>
 				<div id="settings" class="checkbox" style="display:none;">
@@ -99,6 +78,7 @@ if(window.location.hash == "#goto=contains"){
                         <label><input type="checkbox" onchange="setMapGrid($(this).is(':checked'));" checked> Show Grid</label>
                         <label><input type="checkbox" onchange="setNameShadows($(this).is(':checked'));"> Name Shadows</label>
 			<label><input type="checkbox" onchange="setTransparent($(this).is(':checked'));"> Transparent Cells</label>
+			<label><input type="checkbox" onchange="setZoom($(this).is(':checked'));"> Infinite Zoom</label>
                         <hr>
                         <!--NOTE: </b>You do not need to include the # in the color hex.!-->
                         <table>
@@ -141,16 +121,13 @@ if(window.location.hash == "#goto=contains"){
                 	</span>
                 </center>
                 <hr/>
-                <center>
+                <!--center>
                 	<a href="https://github.com/OgarProject/Ogar" class="text-muted" target="_blank">GitHub - Ogar Project</a><br>
 					<a href="https://github.com/Barbosik/MultiOgar" class="text-muted" target="_blank">GitHub - MultiOgar</a><br>
 					<a href="https://github.com/Megabyte918/MultiOgar-Edited" class="text-muted" target="_blank">GitHub - MultiOgar Edited</a><br>
 					<a href="https://github.com/CigarProject/Cigar" class="text-muted" target="_blank">GitHub - CigarProject</a><br>
 					<a href="https://github.com/proxiemind/Ogar-Unlimited" class="text-muted" target="_blank">GitHub - Ogar Unlimited</a>
-				</center>
-			</div>
-			<hr/>
-			<div id="footer">
+				</center!-->
 				<center><p><b>How to connect to a custom server:</b></p></center>
 				<center><p>Paste the server IP in the text box under the name text box.</p></center>
 				<center><p>Or, press the F12 key, then look for the <i>console</i> tab, and finally type <i>setServer("serverIP:port")</i> and press enter.</p></center>
