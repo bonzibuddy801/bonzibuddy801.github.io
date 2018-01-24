@@ -1520,7 +1520,7 @@
                 this.drawTime = timestamp;
                 c = this.updatePos();
                 this.destroyed && (ctx.globalAlpha *= 1 - c);
-                ctx.lineWidth = 10;
+                ctx.lineWidth = 40;
                 ctx.lineCap = "round";
                 ctx.lineJoin = this.isVirus ? "miter" : "round";
                 ctx.globalAlpha = transparentCells ? .5 : 1;
