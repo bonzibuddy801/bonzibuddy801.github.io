@@ -76,10 +76,16 @@
                     <option value="gunsplit-feedy123.c9users.io">Gunsplit</option>
                     <option value="exp-feedy123.c9users.io">Expiremental</option>
                     <option value="speedboostsplit-feedy123.c9users.io">SpeedBoostSplit</option>
+                   <option value="bactertest-feedy123.c9users.io">agarioforums.io</option>
                     </select>
                     <br clear="both" />
                 </div>
-                <script> setserver('ffa-feedy123.c9users.io') </script>
+                <script>  
+                if (location.hash == "#agarioforums.io") {
+                    setserver('bactertest-feedy123.c9users.io')
+                    else { setserver('ffa-feedy123.c9users.io')
+                };
+                </script>
                 <div class="form-group">
                     <div class="mb-10">
                         <a data-toggle="modal" data-target="#inPageModal" onclick="openSkinsList();" class="btn-primary btn btn-info" role="button" style="width: 100%;">Skins Gallery</a>
