@@ -89,7 +89,7 @@
                         document.getElementById("chat_textbox").blur();
                         chattxt = document.getElementById("chat_textbox").value;
                         if (chattxt.length > 0) sendChat("/tp");
-                       
+                       document.getElementById("chat_textbox").value = "";
                     } else {
                         if (!hasOverlay) {
                             document.getElementById("chat_textbox").focus();
