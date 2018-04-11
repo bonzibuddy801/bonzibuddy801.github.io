@@ -83,7 +83,21 @@
                         }
                     }
                     break;
-                case 32: // space
+               case 77: // enter
+                    if (isTyping || hideChat) {
+                        isTyping = false;
+                        document.getElementById("chat_textbox").blur();
+                        chattxt = document.getElementById("chat_textbox").value;
+                        if (chattxt.length > 0) sendChat("/tp");
+                       
+                    } else {
+                        if (!hasOverlay) {
+                            document.getElementById("chat_textbox").focus();
+                            isTyping = true;
+                        }
+                    }
+                    break;
+		    case 32: // space
                     if ((!spacePressed) && (!isTyping)) {
                         sendMouseMove();
                         sendUint8(17);
