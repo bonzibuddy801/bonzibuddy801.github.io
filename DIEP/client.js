@@ -92,7 +92,7 @@ function param(name) {
 		/\+/g, "%20")) || null;
 }
 
-const connectIP = defaults(param("ip"), "http://localhost:8080");
+const connectIP = defaults(param("ip"), "http://pewter-zebra.glitch.me/");
 
 let socket = io.connect(connectIP, {
 	reconnect: false,
