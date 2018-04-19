@@ -1,0 +1,40 @@
+html {
+  overflow: hidden;
+}
+#textInput {
+  position: fixed;
+  width: 321.867px;
+  height: 42.2222px;
+  line-height: 38px;
+  font-size: 38px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Ubuntu";
+  color: black;
+}
+*:focus {
+  outline: none;
+}
+body {
+  background-color: black;
+}
+#loading {
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48pt;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: default;
+}
+#ctx {
+    border: 1px solid #000000;
+    display: none;
+    cursor: crosshair;
+}
